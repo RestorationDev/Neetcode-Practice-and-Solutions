@@ -1,0 +1,90 @@
+class Solution:
+    def twoSum(self, nums: List[int], target:int) -> List[int]:
+        
+        #subtract elem from target
+        #check if difference is in list
+        #keep iterating until difference is found if in list, if not, cont looking
+        prevMap = {}
+        arr = []
+        for i, num in enumerate(nums):
+
+            diff = target - num
+
+            if diff in prevMap:
+                
+                arr.append(prevMap[diff])
+                arr.append(i)
+                
+                break
+
+            prevMap[num] = i
+
+        return arr
+
+
+
+
+
+        
+
+
+
+
+
+
+                
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# prevNums = {}
+
+
+#         for i, n in enumerate(nums):
+
+#             diff = target - n
+
+#             if diff in prevNums:
+
+#                 return [prevNums[diff], i]
+            
+#             prevNums[n] = i
+
+# class Solution:
+#     def twoSum(self, nums: List[int], target:int) -> List[int]:
+#         prevMap = {}
+
+#         for i, n in enumerate(nums):
+#             diff = target - n
+
+#             if diff in prevMap:
+#                 return[prevMap[diff],i]
+                
+#             prevMap[n] = i
+
+# prevMap stores the number as well as the index as it iterates through the list
+
+# a for loop that iterates through a list with both the index and item is started
+# we calculate a difference and check if it's in the prevmap, and if so, we return each idx
+
+
